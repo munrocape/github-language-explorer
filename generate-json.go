@@ -2,10 +2,8 @@ package main
 
 import (
 	"encoding/json"
-	"fmt"
 	"io/ioutil"
 	"net/http"
-	"os"
 
 	"gopkg.in/yaml.v2"
 )
@@ -19,27 +17,40 @@ func check(e error) {
 func main() {
 
 	// Get YAML representing all languages
-	var unmarshalled_yaml []byte
 	response, err := http.Get("https://raw.githubusercontent.com/github/linguist/master/lib/linguist/languages.yml")
 	check(err)
-	
+
 	defer response.Body.Close()
 	contents, err := ioutil.ReadAll(response.Body)
 	check(err)
-	
-	unmarshalled_yaml = []byte(contents)
+
+	unmarshalled_yaml := []byte(contents)
 
 	// Parse YAML into map representation
-
-	m := make(map[interface{}]interface{})
-	err = yaml.Unmarshal(unmarshalled_yaml, &m)
+	yamlMap := make(map[string]map[string]interface{})
+	err = yaml.Unmarshal(unmarshalled_yaml, &yamlMap)
 	check(err)
 
-	fmt.Printf("%#v\n", m)
-
 	// Convert map to JSON
+	colorMap := make(map[string]string)
+
+	for k, v := range yamlMap {
+		if val, ok := v["color"]; ok { // color exists
+			if str, ok := val.(string); ok { // string type check (required)
+				colorMap[k] = str
+			}
+		}
+	}
+
+	colorJSON, err := json.MarshalIndent(colorMap, "", "    ")
+	check(err)
+	allJSON, err := json.MarshalIndent(yamlMap, "", "    ")
+	check(err)
 
 	// Write to file
-
+	err = ioutil.WriteFile("color-info.json", colorJSON, 0644)
+	check(err)
+	err = ioutil.WriteFile("all-info.json", allJSON, 0644)
+	check(err)
 
 }
