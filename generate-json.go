@@ -48,9 +48,9 @@ func main() {
 	check(err)
 
 	// Write to file
-	err = ioutil.WriteFile("color-info.json", colorJSON, 0644)
+	err = ioutil.WriteFile("color-info.json", []byte("color_data = " + string(colorJSON)), 0644)
 	check(err)
-	err = ioutil.WriteFile("all-info.json", allJSON, 0644)
+	err = ioutil.WriteFile("all-info.json", []byte("all_data = " + string(allJSON)), 0644)
 	check(err)
 
 }
