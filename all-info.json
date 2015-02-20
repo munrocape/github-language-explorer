@@ -1,4 +1,4 @@
-{
+all_data = {
     "ABAP": {
         "ace_mode": "abap",
         "extensions": [
