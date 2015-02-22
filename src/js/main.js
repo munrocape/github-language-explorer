@@ -9,9 +9,33 @@ unbind:function(a,b){return m.bind(a,function(){},b)},trigger:function(a,b){if(q
 b[c[e].seq]=1,x(c[e].callback,d,c[e].combo,c[e].seq)):g||x(c[e].callback,d,c[e].combo);c="keypress"==d.type&&I;d.type!=u||w(a)||c||t(b);I=g&&"keydown"==d.type}};J.Mousetrap=m;"function"===typeof define&&define.amd&&define(m)})(window,document);
 
 /* page specific js */
-index = 0
-Mousetrap.bind('left', function() { index -= 1; console.log(index); });
-Mousetrap.bind('right', function() { index += 1; console.log(index); });
 
 $(document).ready(function(e) {
+	color_index = 0;
+	keys = Object.keys(color_data);
+	keys_length = keys.length;
+
+	// shuffle order of languages
+	for (var i = 0; i < keys_length; i++){
+		var j = Math.floor(Math.random() * (i + 1));
+		var temp = keys[i];
+        keys[i] = keys[j];
+        keys[j] = temp;
+	}
+	
+	var changeColor = function() {
+		if (color_index < 0){
+			color_index = keys_length + color_index;
+			return changeColor()
+		}else if (color_index >= keys_length){
+			color_index = color_index - keys_length;
+			return changeColor()
+		}
+		console.log(keys[color_index] + ": " + color_data[keys[color_index]]);
+		$("body").css("background-color", color_data[keys[color_index]])
+	}
+	
+	Mousetrap.bind('left', function() { color_index -= 1; changeColor(); });
+	Mousetrap.bind('right', function() { color_index += 1; changeColor(); });
+	changeColor();
 });
