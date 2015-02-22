@@ -1,0 +1,15 @@
+.language-box{
+	text-align:center;
+	background-color: white;
+	margin-top:10%;
+	padding-top:1%;
+	padding-bottom:1%;
+}
+
+.language-name{
+	font-size:32px;
+}
+
+.language-color{
+	font-size:12px;
+}

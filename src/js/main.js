@@ -32,7 +32,9 @@ $(document).ready(function(e) {
 			return changeColor()
 		}
 		console.log(keys[color_index] + ": " + color_data[keys[color_index]]);
-		$("body").css("background-color", color_data[keys[color_index]])
+		$("body").css("background-color", color_data[keys[color_index]]);
+		$(".language-name").text(keys[color_index]);
+		$(".language-color").text(color_data[keys[color_index]]);
 	}
 	
 	Mousetrap.bind('left', function() { color_index -= 1; changeColor(); });
