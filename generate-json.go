@@ -8,6 +8,16 @@ import (
 	"gopkg.in/yaml.v2"
 )
 
+type Language struct {
+	Name string
+	Hex string
+	R float64 // To find the hue, 1 / {R, G, B} is required
+	G float64 // Typical uint8 assignment is therefore not ideal
+	B float64
+	Hue float64
+
+}
+
 func check(e error) {
 	if e != nil {
 		panic(e)
