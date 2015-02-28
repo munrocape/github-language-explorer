@@ -19,6 +19,15 @@ all_data = {
         "tm_scope": "source.c++",
         "type": "programming"
     },
+    "AMPL": {
+        "ace_mode": "text",
+        "color": "#00008B",
+        "extensions": [
+            ".ampl"
+        ],
+        "tm_scope": "source.ampl",
+        "type": "programming"
+    },
     "ANTLR": {
         "ace_mode": "text",
         "color": "#9DC3FF",
@@ -205,7 +214,6 @@ all_data = {
         "color": "#6E4C13",
         "extensions": [
             ".asm",
-            ".ASM",
             ".a51",
             ".nasm"
         ],
@@ -286,7 +294,8 @@ all_data = {
         "ace_mode": "text",
         "extensions": [
             ".befunge"
-        ]
+        ],
+        "type": "programming"
     },
     "Bison": {
         "ace_mode": "text",
@@ -352,7 +361,8 @@ all_data = {
             ".b",
             ".bf"
         ],
-        "tm_scope": "source.bf"
+        "tm_scope": "source.bf",
+        "type": "programming"
     },
     "Brightscript": {
         "ace_mode": "text",
@@ -374,12 +384,13 @@ all_data = {
         "color": "#555",
         "extensions": [
             ".c",
-            ".C",
-            ".H",
             ".cats",
             ".h",
             ".idc",
             ".w"
+        ],
+        "interpreters": [
+            "tcc"
         ],
         "type": "programming"
     },
@@ -459,14 +470,13 @@ all_data = {
         ],
         "filenames": [
             "CMakeLists.txt"
-        ]
+        ],
+        "type": "programming"
     },
     "COBOL": {
         "ace_mode": "cobol",
         "extensions": [
             ".cob",
-            ".COB",
-            ".CPY",
             ".cbl",
             ".ccp",
             ".cobol",
@@ -525,7 +535,8 @@ all_data = {
         "extensions": [
             ".ck"
         ],
-        "tm_scope": "source.java"
+        "tm_scope": "source.java",
+        "type": "programming"
     },
     "Cirru": {
         "ace_mode": "cirru",
@@ -714,7 +725,8 @@ all_data = {
         "extensions": [
             ".feature"
         ],
-        "tm_scope": "text.gherkin.feature"
+        "tm_scope": "text.gherkin.feature",
+        "type": "programming"
     },
     "Cuda": {
         "ace_mode": "c_cpp",
@@ -775,6 +787,17 @@ all_data = {
         "tm_scope": "source.c++",
         "type": "programming"
     },
+    "DTrace": {
+        "ace_mode": "c_cpp",
+        "extensions": [
+            ".d"
+        ],
+        "interpreters": [
+            "dtrace"
+        ],
+        "tm_scope": "source.c",
+        "type": "programming"
+    },
     "Darcs Patch": {
         "ace_mode": "text",
         "aliases": [
@@ -785,7 +808,8 @@ all_data = {
             ".dpatch"
         ],
         "search_term": "dpatch",
-        "tm_scope": "none"
+        "tm_scope": "none",
+        "type": "programming"
     },
     "Dart": {
         "ace_mode": "dart",
@@ -803,7 +827,8 @@ all_data = {
         "extensions": [
             ".diff",
             ".patch"
-        ]
+        ],
+        "type": "programming"
     },
     "Dockerfile": {
         "ace_mode": "dockerfile",
@@ -973,14 +998,6 @@ all_data = {
         "color": "#4d41b1",
         "extensions": [
             ".f90",
-            ".F",
-            ".F03",
-            ".F08",
-            ".F77",
-            ".F90",
-            ".F95",
-            ".FOR",
-            ".FPP",
             ".f",
             ".f03",
             ".f08",
@@ -1030,9 +1047,7 @@ all_data = {
         "color": "#341708",
         "extensions": [
             ".fth",
-            ".4TH",
             ".4th",
-            ".F",
             ".f",
             ".for",
             ".forth",
@@ -1084,8 +1099,7 @@ all_data = {
     "GAS": {
         "ace_mode": "assembly_x86",
         "extensions": [
-            ".s",
-            ".S"
+            ".s"
         ],
         "group": "Assembly",
         "tm_scope": "source.asm.x86",
@@ -1138,7 +1152,8 @@ all_data = {
         "extensions": [
             ".kid"
         ],
-        "tm_scope": "text.xml.genshi"
+        "tm_scope": "text.xml.genshi",
+        "type": "programming"
     },
     "Gentoo Ebuild": {
         "ace_mode": "sh",
@@ -1146,7 +1161,8 @@ all_data = {
             ".ebuild"
         ],
         "group": "Shell",
-        "tm_scope": "source.shell"
+        "tm_scope": "source.shell",
+        "type": "programming"
     },
     "Gentoo Eclass": {
         "ace_mode": "sh",
@@ -1154,7 +1170,8 @@ all_data = {
             ".eclass"
         ],
         "group": "Shell",
-        "tm_scope": "source.shell"
+        "tm_scope": "source.shell",
+        "type": "programming"
     },
     "Gettext Catalog": {
         "ace_mode": "text",
@@ -1167,7 +1184,8 @@ all_data = {
         ],
         "search_term": "pot",
         "searchable": false,
-        "tm_scope": "source.po"
+        "tm_scope": "source.po",
+        "type": "programming"
     },
     "Glyph": {
         "ace_mode": "tcl",
@@ -1264,7 +1282,6 @@ all_data = {
         "ace_mode": "text",
         "extensions": [
             ".dot",
-            ".DOT",
             ".gv"
         ],
         "tm_scope": "source.dot",
@@ -1285,7 +1302,8 @@ all_data = {
             ".6",
             ".7"
         ],
-        "tm_scope": "text.groff"
+        "tm_scope": "text.groff",
+        "type": "programming"
     },
     "Groovy": {
         "ace_mode": "groovy",
@@ -1311,7 +1329,8 @@ all_data = {
             ".gsp"
         ],
         "group": "Groovy",
-        "tm_scope": "text.html.jsp"
+        "tm_scope": "text.html.jsp",
+        "type": "programming"
     },
     "HTML": {
         "ace_mode": "html",
@@ -1476,6 +1495,7 @@ all_data = {
             ".ini",
             ".cfg",
             ".prefs",
+            ".pro",
             ".properties"
         ],
         "tm_scope": "source.ini",
@@ -1492,7 +1512,8 @@ all_data = {
             ".weechatlog"
         ],
         "search_term": "irc",
-        "tm_scope": "none"
+        "tm_scope": "none",
+        "type": "data"
     },
     "Idris": {
         "ace_mode": "text",
@@ -1521,7 +1542,8 @@ all_data = {
         "extensions": [
             ".iss"
         ],
-        "tm_scope": "source.inno"
+        "tm_scope": "source.inno",
+        "type": "programming"
     },
     "Io": {
         "ace_mode": "io",
@@ -1553,6 +1575,7 @@ all_data = {
     },
     "J": {
         "ace_mode": "text",
+        "color": "#2d8abd",
         "extensions": [
             ".ijs"
         ],
@@ -1634,7 +1657,8 @@ all_data = {
         ],
         "group": "Java",
         "search_term": "jsp",
-        "tm_scope": "text.html.jsp"
+        "tm_scope": "text.html.jsp",
+        "type": "programming"
     },
     "JavaScript": {
         "ace_mode": "javascript",
@@ -1734,7 +1758,8 @@ all_data = {
         "ace_mode": "text",
         "extensions": [
             ".ll"
-        ]
+        ],
+        "type": "programming"
     },
     "LOLCODE": {
         "ace_mode": "text",
@@ -1790,6 +1815,14 @@ all_data = {
         "tm_scope": "source.smarty",
         "type": "markup"
     },
+    "Lean": {
+        "ace_mode": "lean",
+        "extensions": [
+            ".lean",
+            ".hlean"
+        ],
+        "type": "programming"
+    },
     "Less": {
         "ace_mode": "less",
         "extensions": [
@@ -1804,7 +1837,8 @@ all_data = {
         "extensions": [
             ".ly",
             ".ily"
-        ]
+        ],
+        "type": "programming"
     },
     "Liquid": {
         "ace_mode": "liquid",
@@ -1938,6 +1972,16 @@ all_data = {
         "tm_scope": "text.html.basic",
         "type": "markup"
     },
+    "MUF": {
+        "ace_mode": "forth",
+        "extensions": [
+            ".muf",
+            ".m"
+        ],
+        "group": "Forth",
+        "tm_scope": "none",
+        "type": "programming"
+    },
     "Makefile": {
         "ace_mode": "makefile",
         "aliases": [
@@ -1947,6 +1991,7 @@ all_data = {
         ],
         "extensions": [
             ".mak",
+            ".d",
             ".mk"
         ],
         "filenames": [
@@ -1965,7 +2010,8 @@ all_data = {
             ".mako",
             ".mao"
         ],
-        "tm_scope": "text.html.mako"
+        "tm_scope": "text.html.mako",
+        "type": "programming"
     },
     "Markdown": {
         "ace_mode": "markdown",
@@ -2001,7 +2047,9 @@ all_data = {
             ".m",
             ".ma",
             ".nb",
-            ".nbp"
+            ".nbp",
+            ".wl",
+            ".wlt"
         ],
         "type": "programming"
     },
@@ -2068,7 +2116,8 @@ all_data = {
             ".minid"
         ],
         "searchable": false,
-        "tm_scope": "none"
+        "tm_scope": "none",
+        "type": "programming"
     },
     "Mirah": {
         "ace_mode": "ruby",
@@ -2121,14 +2170,16 @@ all_data = {
         "extensions": [
             ".myt"
         ],
-        "tm_scope": "none"
+        "tm_scope": "none",
+        "type": "programming"
     },
     "NSIS": {
         "ace_mode": "text",
         "extensions": [
             ".nsi",
             ".nsh"
-        ]
+        ],
+        "type": "programming"
     },
     "Nemerle": {
         "ace_mode": "text",
@@ -2238,7 +2289,8 @@ all_data = {
             ".numsc"
         ],
         "group": "Python",
-        "tm_scope": "none"
+        "tm_scope": "none",
+        "type": "programming"
     },
     "OCaml": {
         "ace_mode": "ocaml",
@@ -2360,7 +2412,7 @@ all_data = {
         "extensions": [
             ".scad"
         ],
-        "tm_scope": "none",
+        "tm_scope": "source.scad",
         "type": "programming"
     },
     "Org": {
@@ -2508,7 +2560,6 @@ all_data = {
         "color": "#0298c3",
         "extensions": [
             ".pl",
-            ".PL",
             ".cgi",
             ".fcgi",
             ".perl",
@@ -2764,7 +2815,8 @@ all_data = {
         ],
         "interpreters": [
             "qmake"
-        ]
+        ],
+        "type": "programming"
     },
     "R": {
         "ace_mode": "r",
@@ -2776,8 +2828,6 @@ all_data = {
         "color": "#198ce7",
         "extensions": [
             ".r",
-            ".R",
-            ".Rd",
             ".rd",
             ".rsx"
         ],
@@ -2835,8 +2885,7 @@ all_data = {
     "RMarkdown": {
         "ace_mode": "markdown",
         "extensions": [
-            ".rmd",
-            ".Rmd"
+            ".rmd"
         ],
         "tm_scope": "none",
         "type": "prose",
@@ -2876,7 +2925,8 @@ all_data = {
             ".raw"
         ],
         "search_term": "raw",
-        "tm_scope": "none"
+        "tm_scope": "none",
+        "type": "data"
     },
     "Rebol": {
         "ace_mode": "text",
@@ -2908,7 +2958,8 @@ all_data = {
         "extensions": [
             ".cw"
         ],
-        "tm_scope": "none"
+        "tm_scope": "none",
+        "type": "programming"
     },
     "RobotFramework": {
         "ace_mode": "text",
@@ -3228,7 +3279,8 @@ all_data = {
         "ace_mode": "smarty",
         "extensions": [
             ".tpl"
-        ]
+        ],
+        "type": "programming"
     },
     "SourcePawn": {
         "ace_mode": "text",
@@ -3475,12 +3527,12 @@ all_data = {
         "type": "programming"
     },
     "VCL": {
-        "ace_mode": "perl",
+        "ace_mode": "text",
         "color": "#0298c3",
         "extensions": [
             ".vcl"
         ],
-        "tm_scope": "source.perl",
+        "tm_scope": "source.varnish.vcl",
         "type": "programming"
     },
     "VHDL": {
@@ -3635,11 +3687,11 @@ all_data = {
             ".sublime-snippet",
             ".targets",
             ".tmCommand",
+            ".tml",
             ".tmLanguage",
             ".tmPreferences",
             ".tmSnippet",
             ".tmTheme",
-            ".tml",
             ".ts",
             ".ui",
             ".urdf",
@@ -3671,7 +3723,7 @@ all_data = {
             "Web.config",
             "packages.config"
         ],
-        "type": "markup"
+        "type": "data"
     },
     "XProc": {
         "ace_mode": "xml",
@@ -3699,7 +3751,8 @@ all_data = {
         "extensions": [
             ".xs"
         ],
-        "tm_scope": "source.c"
+        "tm_scope": "source.c",
+        "type": "programming"
     },
     "XSLT": {
         "ace_mode": "xml",
@@ -3807,7 +3860,8 @@ all_data = {
         "ace_mode": "text",
         "extensions": [
             ".mu"
-        ]
+        ],
+        "type": "programming"
     },
     "nesC": {
         "ace_mode": "text",

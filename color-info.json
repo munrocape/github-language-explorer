@@ -1,5 +1,6 @@
 color_data = {
     "AGS Script": "#B9D9FF",
+    "AMPL": "#00008B",
     "ANTLR": "#9DC3FF",
     "APL": "#8a0707",
     "ASP": "#6a40fd",
@@ -68,6 +69,7 @@ color_data = {
     "Io": "#a9188d",
     "Ioke": "#078193",
     "Isabelle": "#fdcd00",
+    "J": "#2d8abd",
     "Java": "#b07219",
     "JavaScript": "#f1e05a",
     "Julia": "#a270ba",

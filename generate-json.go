@@ -1,6 +1,8 @@
 package main
 
 import (
+	//"fmt"
+	"strconv"
 	"encoding/json"
 	"io/ioutil"
 	"net/http"
@@ -24,6 +26,26 @@ func check(e error) {
 	}
 }
 
+func hexToRGB(str string) (int64, int64, int64) {
+	var r, g, b int64
+	if(len(str) == 4){
+		r, _ = strconv.ParseInt(str[1:3], 16, 0)
+		g, _ = strconv.ParseInt(str[1:3], 16, 0)
+		b, _ = strconv.ParseInt(str[1:3], 16, 0)
+	} else {
+		r, _ = strconv.ParseInt(str[1:3], 16, 0)
+		g, _ = strconv.ParseInt(str[3:5], 16, 0)
+		b, _ = strconv.ParseInt(str[5:7], 16, 0)
+	}
+	return r, g, b
+}
+
+func createLangStruct(name string, hex string) *Language {
+	//r, g, b := hexToRGB(hex)
+	//fmt.Printf("lang: %s hex: %s rgb: %d %d %d\n", name, hex, r, g, b)
+	return new(Language)
+}
+
 func main() {
 
 	// Get YAML representing all languages
@@ -42,12 +64,13 @@ func main() {
 	check(err)
 
 	// Convert map to JSON
-	colorMap := make(map[string]string)
+	// colorMap := make(map[string] *Language)
+	colorMap := make(map[string] string)
 
 	for k, v := range yamlMap {
 		if val, ok := v["color"]; ok { // color exists
 			if str, ok := val.(string); ok { // string type check (required)
-				colorMap[k] = str
+				colorMap[k] = str// createLangStruct(k, str)
 			}
 		}
 	}
