@@ -2486,6 +2486,26 @@ all_data = {
         "tm_scope": "text.html.php",
         "type": "programming"
     },
+    "PLSQL": {
+        "ace_mode": "sql",
+        "extensions": [
+            ".pls",
+            ".pkb",
+            ".pks",
+            ".plb",
+            ".sql"
+        ],
+        "tm_scope": "source.plsql.oracle",
+        "type": "programming"
+    },
+    "PLpgSQL": {
+        "ace_mode": "pgsql",
+        "extensions": [
+            ".sql"
+        ],
+        "tm_scope": "source.sql",
+        "type": "programming"
+    },
     "Pan": {
         "ace_mode": "text",
         "color": "#cc0000",
@@ -3088,6 +3108,15 @@ all_data = {
         ],
         "tm_scope": "source.sql",
         "type": "data"
+    },
+    "SQLPL": {
+        "ace_mode": "sql",
+        "extensions": [
+            ".sql",
+            ".db2"
+        ],
+        "tm_scope": "source.sql",
+        "type": "programming"
     },
     "STON": {
         "ace_mode": "text",
