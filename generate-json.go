@@ -2,6 +2,7 @@ package main
 
 import (
 	//"fmt"
+	"math"
 	"strconv"
 	"encoding/json"
 	"io/ioutil"
@@ -86,6 +87,7 @@ func hueFromRGB(r float64, g float64, b float64) float64 {
 	b = b / 255
 	max := ternaryMax(r, g, b)
 	min := ternaryMin(r, g, b)
+	delta := max - min
 	if (min == 0) {
 		return float64(0)
 	}
@@ -94,11 +96,11 @@ func hueFromRGB(r float64, g float64, b float64) float64 {
 	}
 	var hue float64
 	if (max == r) {
-		hue = (g - b) / min
+		hue = 60 * math.Mod(((g - b) / delta), float64(6))
 	} else if (max == g) {
-		hue = 2.0 + (b - r) / (max - min)
+		hue = 60 * ((2.0 + (b - r)) / delta)
 	} else {
-		hue = 4.0 + (r - g) / (max - min)
+		hue = 60 * (4.0 + ((r - g) / delta))
 	}
 	return hue
 }
