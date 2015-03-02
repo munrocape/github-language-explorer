@@ -1,3 +1,5 @@
 #Github Language Explorer
 
-Explore the colors associated with languages on Github. Use the left and right arrow keys to navigate through the languages and their associated colors [here](https://munrocape.github.io/github-language-explorer).
+JSON dump of languages and their corresponding colors. A language's color is pulled from GitHub's Linguist, a program that, amongst other things, parses and assigns a color to all files on GitHub.
+
+Check out the languages and their associated colors [here](https://munrocape.github.io/github-language-explorer). Use your left and right arrow keys to navigate.
