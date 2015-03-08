@@ -381,7 +381,7 @@ all_data = {
     },
     "C": {
         "ace_mode": "c_cpp",
-        "color": "#555",
+        "color": "#555555",
         "extensions": [
             ".c",
             ".cats",
@@ -1131,7 +1131,6 @@ all_data = {
             ".vrx",
             ".vshader"
         ],
-        "group": "C",
         "type": "programming"
     },
     "Game Maker Language": {
@@ -1185,7 +1184,7 @@ all_data = {
         "search_term": "pot",
         "searchable": false,
         "tm_scope": "source.po",
-        "type": "programming"
+        "type": "prose"
     },
     "Glyph": {
         "ace_mode": "tcl",
@@ -2173,6 +2172,14 @@ all_data = {
         "tm_scope": "none",
         "type": "programming"
     },
+    "NL": {
+        "ace_mode": "text",
+        "extensions": [
+            ".nl"
+        ],
+        "tm_scope": "none",
+        "type": "data"
+    },
     "NSIS": {
         "ace_mode": "text",
         "extensions": [
@@ -2825,7 +2832,7 @@ all_data = {
             ".qml"
         ],
         "tm_scope": "source.qml",
-        "type": "markup"
+        "type": "programming"
     },
     "QMake": {
         "ace_mode": "text",
@@ -3015,6 +3022,7 @@ all_data = {
             ".gemspec",
             ".god",
             ".irbrc",
+            ".jbuilder",
             ".mspec",
             ".pluginspec",
             ".podspec",
@@ -3663,10 +3671,11 @@ all_data = {
     },
     "XC": {
         "ace_mode": "c_cpp",
+        "color": "#99DA07",
         "extensions": [
             ".xc"
         ],
-        "tm_scope": "source.c",
+        "tm_scope": "source.xc",
         "type": "programming"
     },
     "XML": {
@@ -3859,6 +3868,7 @@ all_data = {
     },
     "eC": {
         "ace_mode": "text",
+        "color": "#4A4773",
         "extensions": [
             ".ec",
             ".eh"

@@ -2,28 +2,47 @@ package main
 
 import (
 	//"fmt"
-	"math"
-	"strconv"
 	"encoding/json"
 	"io/ioutil"
+	"math"
 	"net/http"
 	"sort"
+	"strconv"
 
 	"gopkg.in/yaml.v2"
 )
 
-type Color struct {
-	Hex string
-	R float64
-	G float64
-	B float64
-	Hue float64
-
+type Language struct {
+	Name  string
+	Color Color
 }
 
-type Language struct {
-	Name string
-	Color Color
+func NewLanguage(name string, hex string) Language {
+	color := NewColor(hex)
+	l := Language{Name: name, Color: color}
+	return l
+}
+
+type Color struct {
+	Hex        string
+	R          float64
+	G          float64
+	B          float64
+	MaxRGB     float64
+	MinRGB     float64
+	Hue        float64
+	Saturation float64
+	Lightness  float64
+}
+
+func NewColor(hex string) Color {
+	c := new(Color)
+	c.Hex = hex
+	c.R, c.G, c.B = hexToRGB(hex)
+	c.MaxRGB = ternaryMax(c.R, c.G, c.B)
+	c.MinRGB = ternaryMin(c.R, c.G, c.B)
+	c.Hue = hueFromRGB(c.MaxRGB, c.MinRGB, c.R, c.G, c.B)
+	return *c
 }
 
 // Sorting implementation for language list
@@ -34,7 +53,12 @@ func (slice Languages) Len() int {
 }
 
 func (slice Languages) Less(i, j int) bool {
-	return slice[i].Color.Hue < slice[j].Color.Hue	
+	return slice[i].Color.Hue < slice[j].Color.Hue
+	//if slice[i].Color.Hue == slice[j].Color.Hue {
+	//	return slice[i].Color.Lightness < slice[j].Color.Lightness
+	//} else {
+	//	return slice[i].Color.Hue < slice[j].Color.Hue
+	//}
 }
 
 func (slice Languages) Swap(i, j int) {
@@ -69,7 +93,7 @@ func ternaryMin(a float64, b float64, c float64) float64 {
 
 func hexToRGB(str string) (float64, float64, float64) {
 	var r, g, b int64
-	if(len(str) == 4){
+	if len(str) == 4 {
 		r, _ = strconv.ParseInt(str[1:3], 16, 0)
 		g, _ = strconv.ParseInt(str[1:3], 16, 0)
 		b, _ = strconv.ParseInt(str[1:3], 16, 0)
@@ -81,42 +105,27 @@ func hexToRGB(str string) (float64, float64, float64) {
 	return float64(r), float64(g), float64(b)
 }
 
-func hueFromRGB(r float64, g float64, b float64) float64 {
-	r = r / 255
-	g = g / 255
-	b = b / 255
-	max := ternaryMax(r, g, b)
-	min := ternaryMin(r, g, b)
+func hueFromRGB(max float64, min float64, r float64, g float64, b float64) float64 {
 	delta := max - min
-	if (min == 0) {
+	if min == 0 {
 		return float64(0)
 	}
-	if ((max - min) == 0) {
+	if (max - min) == 0 {
 		return float64(0)
 	}
 	var hue float64
-	if (max == r) {
-		hue = 60 * math.Mod(((g - b) / delta), float64(6))
-	} else if (max == g) {
-		hue = 60 * ((2.0 + (b - r)) / delta)
+	if max == r {
+		hue = (math.Mod((g-b)/delta, 6))
+	} else if max == g {
+		hue = (2 + (b-r)/delta)
 	} else {
-		hue = 60 * (4.0 + ((r - g) / delta))
+		hue = (4 + (r-g)/delta)
 	}
-	return hue
+	return hue * 60
 }
 
-
-func createColor(str string) Color {
-	r, g, b := hexToRGB(str)
-	hue := hueFromRGB(r, g, b)
-	c := Color{Hex: str, R: r, G: g, B: b, Hue: hue}
-	return c
-}
-
-func createLangStruct(name string, hex string) Language {
-	color := createColor(hex)
-	l := Language{Name: name, Color: color}
-	return l
+func lightnessFromRGB(max float64, min float64, r float64, g float64, b float64) float64 {
+	return 0.30*r + 0.59*g + 0.11*b
 }
 
 func main() {
@@ -137,12 +146,12 @@ func main() {
 	check(err)
 
 	// Convert map to JSON
-	colorMap := make(map[string] Language)
+	colorMap := make(map[string]Language)
 
 	for k, v := range yamlMap {
 		if val, ok := v["color"]; ok { // color exists
 			if str, ok := val.(string); ok { // string type check (required)
-				colorMap[k] =  createLangStruct(k, str)
+				colorMap[k] = NewLanguage(k, str)
 			}
 		}
 	}
@@ -159,9 +168,9 @@ func main() {
 	check(err)
 
 	// Write to file
-	err = ioutil.WriteFile("color-info.json", []byte("color_data = " + string(colorJSON)), 0644)
+	err = ioutil.WriteFile("color-info.json", []byte("color_data = "+string(colorJSON)), 0644)
 	check(err)
-	err = ioutil.WriteFile("all-info.json", []byte("all_data = " + string(allJSON)), 0644)
+	err = ioutil.WriteFile("all-info.json", []byte("all_data = "+string(allJSON)), 0644)
 	check(err)
 
 }
