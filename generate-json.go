@@ -119,6 +119,10 @@ func createLangStruct(name string, hex string) Language {
 	return l
 }
 
+type YamlResponse struct {
+	
+}
+
 func main() {
 
 	// Get YAML representing all languages

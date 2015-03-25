@@ -140,8 +140,7 @@ all_data = {
             "apache"
         ],
         "extensions": [
-            ".apacheconf",
-            ".conf"
+            ".apacheconf"
         ],
         "tm_scope": "source.apache-config",
         "type": "markup"
@@ -381,7 +380,7 @@ all_data = {
     },
     "C": {
         "ace_mode": "c_cpp",
-        "color": "#555",
+        "color": "#555555",
         "extensions": [
             ".c",
             ".cats",
@@ -561,6 +560,7 @@ all_data = {
         "color": "#db5855",
         "extensions": [
             ".clj",
+            ".boot",
             ".cl2",
             ".cljc",
             ".cljs",
@@ -789,6 +789,9 @@ all_data = {
     },
     "DTrace": {
         "ace_mode": "c_cpp",
+        "aliases": [
+            "dtrace-script"
+        ],
         "extensions": [
             ".d"
         ],
@@ -809,7 +812,7 @@ all_data = {
         ],
         "search_term": "dpatch",
         "tm_scope": "none",
-        "type": "programming"
+        "type": "data"
     },
     "Dart": {
         "ace_mode": "dart",
@@ -824,11 +827,13 @@ all_data = {
         "aliases": [
             "udiff"
         ],
+        "color": "#88dddd",
         "extensions": [
             ".diff",
             ".patch"
         ],
-        "type": "programming"
+        "tm_scope": "source.diff",
+        "type": "data"
     },
     "Dockerfile": {
         "ace_mode": "dockerfile",
@@ -913,6 +918,9 @@ all_data = {
         "extensions": [
             ".ex",
             ".exs"
+        ],
+        "filenames": [
+            "mix.lock"
         ],
         "type": "programming"
     },
@@ -1042,6 +1050,14 @@ all_data = {
         "tm_scope": "source.fan",
         "type": "programming"
     },
+    "Formatted": {
+        "ace_mode": "text",
+        "extensions": [
+            ".for"
+        ],
+        "tm_scope": "none",
+        "type": "data"
+    },
     "Forth": {
         "ace_mode": "forth",
         "color": "#341708",
@@ -1131,7 +1147,6 @@ all_data = {
             ".vrx",
             ".vshader"
         ],
-        "group": "C",
         "type": "programming"
     },
     "Game Maker Language": {
@@ -1185,7 +1200,7 @@ all_data = {
         "search_term": "pot",
         "searchable": false,
         "tm_scope": "source.po",
-        "type": "programming"
+        "type": "prose"
     },
     "Glyph": {
         "ace_mode": "tcl",
@@ -1303,7 +1318,7 @@ all_data = {
             ".7"
         ],
         "tm_scope": "text.groff",
-        "type": "programming"
+        "type": "markup"
     },
     "Groovy": {
         "ace_mode": "groovy",
@@ -1418,6 +1433,7 @@ all_data = {
             "hbs",
             "htmlbars"
         ],
+        "color": "#01a9d6",
         "extensions": [
             ".handlebars",
             ".hbs"
@@ -1937,7 +1953,7 @@ all_data = {
     },
     "Lua": {
         "ace_mode": "lua",
-        "color": "#fa1fa1",
+        "color": "#000080",
         "extensions": [
             ".lua",
             ".fcgi",
@@ -2173,6 +2189,14 @@ all_data = {
         "tm_scope": "none",
         "type": "programming"
     },
+    "NL": {
+        "ace_mode": "text",
+        "extensions": [
+            ".nl"
+        ],
+        "tm_scope": "none",
+        "type": "data"
+    },
     "NSIS": {
         "ace_mode": "text",
         "extensions": [
@@ -2187,6 +2211,26 @@ all_data = {
         "extensions": [
             ".n"
         ],
+        "type": "programming"
+    },
+    "NetLinx": {
+        "ace_mode": "text",
+        "color": "#0000ff",
+        "extensions": [
+            ".axs",
+            ".axi"
+        ],
+        "tm_scope": "source.netlinx",
+        "type": "programming"
+    },
+    "NetLinx+ERB": {
+        "ace_mode": "text",
+        "color": "#407fff",
+        "extensions": [
+            ".axs.erb",
+            ".axi.erb"
+        ],
+        "tm_scope": "source.netlinx.erb",
         "type": "programming"
     },
     "NetLogo": {
@@ -2304,6 +2348,11 @@ all_data = {
             ".mll",
             ".mly"
         ],
+        "interpreters": [
+            "ocaml",
+            "ocamlrun"
+        ],
+        "tm_scope": "source.ocaml",
         "type": "programming"
     },
     "ObjDump": {
@@ -2493,6 +2542,7 @@ all_data = {
             ".pkb",
             ".pks",
             ".plb",
+            ".plsql",
             ".sql"
         ],
         "tm_scope": "source.plsql.oracle",
@@ -2593,6 +2643,7 @@ all_data = {
         "interpreters": [
             "perl"
         ],
+        "tm_scope": "source.perl",
         "type": "programming"
     },
     "Perl6": {
@@ -2617,7 +2668,7 @@ all_data = {
         "interpreters": [
             "perl6"
         ],
-        "tm_scope": "none",
+        "tm_scope": "source.perl.6",
         "type": "programming"
     },
     "PigLatin": {
@@ -2825,7 +2876,7 @@ all_data = {
             ".qml"
         ],
         "tm_scope": "source.qml",
-        "type": "markup"
+        "type": "programming"
     },
     "QMake": {
         "ace_mode": "text",
@@ -2920,6 +2971,9 @@ all_data = {
             ".rktl",
             ".scrbl"
         ],
+        "interpreters": [
+            "racket"
+        ],
         "tm_scope": "source.racket",
         "type": "programming"
     },
@@ -2958,6 +3012,7 @@ all_data = {
             ".r3",
             ".rebol"
         ],
+        "tm_scope": "source.rebol",
         "type": "programming"
     },
     "Red": {
@@ -2970,7 +3025,7 @@ all_data = {
             ".red",
             ".reds"
         ],
-        "tm_scope": "none",
+        "tm_scope": "source.red",
         "type": "programming"
     },
     "Redcode": {
@@ -3015,6 +3070,7 @@ all_data = {
             ".gemspec",
             ".god",
             ".irbrc",
+            ".jbuilder",
             ".mspec",
             ".pluginspec",
             ".podspec",
@@ -3201,7 +3257,6 @@ all_data = {
         ],
         "interpreters": [
             "guile",
-            "racket",
             "bigloo",
             "chicken"
         ],
@@ -3318,7 +3373,8 @@ all_data = {
         ],
         "color": "#f69e1d",
         "extensions": [
-            ".sp"
+            ".sp",
+            ".sma"
         ],
         "tm_scope": "source.sp",
         "type": "programming"
@@ -3600,16 +3656,19 @@ all_data = {
     "VimL": {
         "ace_mode": "text",
         "aliases": [
-            "vim"
+            "vim",
+            "nvim"
         ],
         "color": "#199c4b",
         "extensions": [
             ".vim"
         ],
         "filenames": [
+            ".nvimrc",
             ".vimrc",
             "_vimrc",
             "gvimrc",
+            "nvimrc",
             "vimrc"
         ],
         "search_term": "vim",
@@ -3663,10 +3722,11 @@ all_data = {
     },
     "XC": {
         "ace_mode": "c_cpp",
+        "color": "#99DA07",
         "extensions": [
             ".xc"
         ],
-        "tm_scope": "source.c",
+        "tm_scope": "source.xc",
         "type": "programming"
     },
     "XML": {
@@ -3712,6 +3772,7 @@ all_data = {
             ".rss",
             ".scxml",
             ".srdf",
+            ".storyboard",
             ".stTheme",
             ".sublime-snippet",
             ".targets",
@@ -3735,6 +3796,7 @@ all_data = {
             ".x3d",
             ".xacro",
             ".xaml",
+            ".xib",
             ".xlf",
             ".xliff",
             ".xmi",
@@ -3859,6 +3921,7 @@ all_data = {
     },
     "eC": {
         "ace_mode": "text",
+        "color": "#4A4773",
         "extensions": [
             ".ec",
             ".eh"

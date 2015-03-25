@@ -70,16 +70,6 @@ color_data = [
         }
     },
     {
-        "Name": "Lua",
-        "Color": {
-            "Hex": "#fa1fa1",
-            "R": 250,
-            "G": 31,
-            "B": 161,
-            "Hue": -35.61643835616438
-        }
-    },
-    {
         "Name": "Objective-J",
         "Color": {
             "Hex": "#ff0c5a",
@@ -160,41 +150,21 @@ color_data = [
         }
     },
     {
-        "Name": "LFE",
+        "Name": "Isabelle",
         "Color": {
-            "Hex": "#004200",
-            "R": 0,
-            "G": 66,
+            "Hex": "#fdcd00",
+            "R": 253,
+            "G": 205,
             "B": 0,
             "Hue": 0
         }
     },
     {
-        "Name": "Nix",
+        "Name": "KRL",
         "Color": {
-            "Hex": "#7070ff",
-            "R": 112,
-            "G": 112,
-            "B": 255,
-            "Hue": 0
-        }
-    },
-    {
-        "Name": "Volt",
-        "Color": {
-            "Hex": "#0098db",
-            "R": 0,
-            "G": 152,
-            "B": 219,
-            "Hue": 0
-        }
-    },
-    {
-        "Name": "LOLCODE",
-        "Color": {
-            "Hex": "#cc9900",
-            "R": 204,
-            "G": 153,
+            "Hex": "#f5c800",
+            "R": 245,
+            "G": 200,
             "B": 0,
             "Hue": 0
         }
@@ -210,61 +180,41 @@ color_data = [
         }
     },
     {
-        "Name": "Isabelle",
+        "Name": "Rouge",
         "Color": {
-            "Hex": "#fdcd00",
-            "R": 253,
-            "G": 205,
+            "Hex": "#cc0088",
+            "R": 204,
+            "G": 0,
+            "B": 136,
+            "Hue": 0
+        }
+    },
+    {
+        "Name": "XQuery",
+        "Color": {
+            "Hex": "#2700e2",
+            "R": 39,
+            "G": 0,
+            "B": 226,
+            "Hue": 0
+        }
+    },
+    {
+        "Name": "LFE",
+        "Color": {
+            "Hex": "#004200",
+            "R": 0,
+            "G": 66,
             "B": 0,
             "Hue": 0
         }
     },
     {
-        "Name": "Papyrus",
+        "Name": "Pan",
         "Color": {
-            "Hex": "#6600cc",
-            "R": 102,
-            "G": 0,
-            "B": 204,
-            "Hue": 0
-        }
-    },
-    {
-        "Name": "Slash",
-        "Color": {
-            "Hex": "#007eff",
-            "R": 0,
-            "G": 126,
-            "B": 255,
-            "Hue": 0
-        }
-    },
-    {
-        "Name": "AMPL",
-        "Color": {
-            "Hex": "#00008B",
-            "R": 0,
-            "G": 0,
-            "B": 139,
-            "Hue": 0
-        }
-    },
-    {
-        "Name": "Puppet",
-        "Color": {
-            "Hex": "#cc5555",
+            "Hex": "#cc0000",
             "R": 204,
-            "G": 85,
-            "B": 85,
-            "Hue": 0
-        }
-    },
-    {
-        "Name": "BlitzMax",
-        "Color": {
-            "Hex": "#cd6400",
-            "R": 205,
-            "G": 100,
+            "G": 0,
             "B": 0,
             "Hue": 0
         }
@@ -280,92 +230,12 @@ color_data = [
         }
     },
     {
-        "Name": "C",
-        "Color": {
-            "Hex": "#555",
-            "R": 85,
-            "G": 85,
-            "B": 85,
-            "Hue": 0
-        }
-    },
-    {
-        "Name": "Rouge",
-        "Color": {
-            "Hex": "#cc0088",
-            "R": 204,
-            "G": 0,
-            "B": 136,
-            "Hue": 0
-        }
-    },
-    {
-        "Name": "Cirru",
-        "Color": {
-            "Hex": "#aaaaff",
-            "R": 170,
-            "G": 170,
-            "B": 255,
-            "Hue": 0
-        }
-    },
-    {
-        "Name": "KRL",
-        "Color": {
-            "Hex": "#f5c800",
-            "R": 245,
-            "G": 200,
-            "B": 0,
-            "Hue": 0
-        }
-    },
-    {
-        "Name": "XQuery",
-        "Color": {
-            "Hex": "#2700e2",
-            "R": 39,
-            "G": 0,
-            "B": 226,
-            "Hue": 0
-        }
-    },
-    {
-        "Name": "NetLogo",
-        "Color": {
-            "Hex": "#ff2b2b",
-            "R": 255,
-            "G": 43,
-            "B": 43,
-            "Hue": 0
-        }
-    },
-    {
-        "Name": "Frege",
-        "Color": {
-            "Hex": "#00cafe",
-            "R": 0,
-            "G": 202,
-            "B": 254,
-            "Hue": 0
-        }
-    },
-    {
         "Name": "APL",
         "Color": {
             "Hex": "#8a0707",
             "R": 138,
             "G": 7,
             "B": 7,
-            "Hue": 0
-        }
-    },
-    {
-        "Name": "MTML",
-        "Color": {
-            "Hex": "#0095d9",
-            "R": 0,
-            "G": 149,
-            "B": 217,
             "Hue": 0
         }
     },
@@ -380,6 +250,76 @@ color_data = [
         }
     },
     {
+        "Name": "MTML",
+        "Color": {
+            "Hex": "#0095d9",
+            "R": 0,
+            "G": 149,
+            "B": 217,
+            "Hue": 0
+        }
+    },
+    {
+        "Name": "BlitzMax",
+        "Color": {
+            "Hex": "#cd6400",
+            "R": 205,
+            "G": 100,
+            "B": 0,
+            "Hue": 0
+        }
+    },
+    {
+        "Name": "Lua",
+        "Color": {
+            "Hex": "#000080",
+            "R": 0,
+            "G": 0,
+            "B": 128,
+            "Hue": 0
+        }
+    },
+    {
+        "Name": "Nix",
+        "Color": {
+            "Hex": "#7070ff",
+            "R": 112,
+            "G": 112,
+            "B": 255,
+            "Hue": 0
+        }
+    },
+    {
+        "Name": "Frege",
+        "Color": {
+            "Hex": "#00cafe",
+            "R": 0,
+            "G": 202,
+            "B": 254,
+            "Hue": 0
+        }
+    },
+    {
+        "Name": "AMPL",
+        "Color": {
+            "Hex": "#00008B",
+            "R": 0,
+            "G": 0,
+            "B": 139,
+            "Hue": 0
+        }
+    },
+    {
+        "Name": "NetLogo",
+        "Color": {
+            "Hex": "#ff2b2b",
+            "R": 255,
+            "G": 43,
+            "B": 43,
+            "Hue": 0
+        }
+    },
+    {
         "Name": "Grammatical Framework",
         "Color": {
             "Hex": "#ff0000",
@@ -390,11 +330,81 @@ color_data = [
         }
     },
     {
-        "Name": "Pan",
+        "Name": "Slash",
         "Color": {
-            "Hex": "#cc0000",
-            "R": 204,
+            "Hex": "#007eff",
+            "R": 0,
+            "G": 126,
+            "B": 255,
+            "Hue": 0
+        }
+    },
+    {
+        "Name": "Volt",
+        "Color": {
+            "Hex": "#0098db",
+            "R": 0,
+            "G": 152,
+            "B": 219,
+            "Hue": 0
+        }
+    },
+    {
+        "Name": "Cirru",
+        "Color": {
+            "Hex": "#aaaaff",
+            "R": 170,
+            "G": 170,
+            "B": 255,
+            "Hue": 0
+        }
+    },
+    {
+        "Name": "C",
+        "Color": {
+            "Hex": "#555555",
+            "R": 85,
+            "G": 85,
+            "B": 85,
+            "Hue": 0
+        }
+    },
+    {
+        "Name": "NetLinx",
+        "Color": {
+            "Hex": "#0000ff",
+            "R": 0,
             "G": 0,
+            "B": 255,
+            "Hue": 0
+        }
+    },
+    {
+        "Name": "Puppet",
+        "Color": {
+            "Hex": "#cc5555",
+            "R": 204,
+            "G": 85,
+            "B": 85,
+            "Hue": 0
+        }
+    },
+    {
+        "Name": "Papyrus",
+        "Color": {
+            "Hex": "#6600cc",
+            "R": 102,
+            "G": 0,
+            "B": 204,
+            "Hue": 0
+        }
+    },
+    {
+        "Name": "LOLCODE",
+        "Color": {
+            "Hex": "#cc9900",
+            "R": 204,
+            "G": 153,
             "B": 0,
             "Hue": 0
         }
@@ -760,6 +770,16 @@ color_data = [
         }
     },
     {
+        "Name": "XC",
+        "Color": {
+            "Hex": "#99DA07",
+            "R": 153,
+            "G": 218,
+            "B": 7,
+            "Hue": 103.50710900473933
+        }
+    },
+    {
         "Name": "Turing",
         "Color": {
             "Hex": "#45f715",
@@ -870,6 +890,16 @@ color_data = [
         }
     },
     {
+        "Name": "Handlebars",
+        "Color": {
+            "Hex": "#01a9d6",
+            "R": 1,
+            "G": 169,
+            "B": 214,
+            "Hue": 192.6760563380282
+        }
+    },
+    {
         "Name": "Elm",
         "Color": {
             "Hex": "#60B5CC",
@@ -890,7 +920,7 @@ color_data = [
         }
     },
     {
-        "Name": "Pascal",
+        "Name": "Component Pascal",
         "Color": {
             "Hex": "#b0ce4e",
             "R": 176,
@@ -900,7 +930,7 @@ color_data = [
         }
     },
     {
-        "Name": "Component Pascal",
+        "Name": "Pascal",
         "Color": {
             "Hex": "#b0ce4e",
             "R": 176,
@@ -1290,6 +1320,16 @@ color_data = [
         }
     },
     {
+        "Name": "NetLinx+ERB",
+        "Color": {
+            "Hex": "#407fff",
+            "R": 64,
+            "G": 127,
+            "B": 255,
+            "Hue": 220.20942408376962
+        }
+    },
+    {
         "Name": "Scheme",
         "Color": {
             "Hex": "#1e4aec",
@@ -1367,6 +1407,16 @@ color_data = [
             "G": 175,
             "B": 141,
             "Hue": 238.5
+        }
+    },
+    {
+        "Name": "eC",
+        "Color": {
+            "Hex": "#4A4773",
+            "R": 74,
+            "G": 71,
+            "B": 115,
+            "Hue": 244.0909090909091
         }
     },
     {
@@ -1617,6 +1667,16 @@ color_data = [
             "G": 211,
             "B": 176,
             "Hue": 391.3953488372094
+        }
+    },
+    {
+        "Name": "Diff",
+        "Color": {
+            "Hex": "#88dddd",
+            "R": 136,
+            "G": 221,
+            "B": 221,
+            "Hue": 420
         }
     },
     {
